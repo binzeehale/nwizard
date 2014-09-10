@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link rel="stylesheet" href="jquery-nwizard.css"></head>
+<body>
+    <!-- <div class="wizard">
+        <ul>
+            <li class="active">
+                <div class="title">Test</div>
+                <div class="circle">
+                    <span>1</span>
+                </div>
+                <div class="horizontal-bar hide"></div>
+            </li>
+            <li>
+                <div class="title">Test</div>
+                <div class="circle">
+                    <span>2</span>
+                </div>
+                <div class="horizontal-bar"></div>
+            </li>
+            <li>
+                <div class="title">Test</div>
+                <div class="circle">
+                    <span>3</span>
+                </div>
+                <div class="horizontal-bar"></div>
+            </li>
+            <li>
+                <div class="title">TTTTTTTTTTTTTTTT</div>
+                <div class="circle">
+                    <span>4</span>
+                </div>
+                <div class="horizontal-bar"></div>
+            </li>
+            <li>
+                <div class="title">Test</div>
+                <div class="circle">
+                    <span>5</span>
+                </div>
+                <div class="horizontal-bar"></div>
+            </li>
+        </ul>
+    </div> -->
+    <div id='wizard'>
+        <ul>
+            <li><a href="javascript:alert(1)">Test</a></li>
+            <li class="active"><a href="#">Test</a></li>
+            <li><a href="#">Test</a></li>
+            <li><a href="http://www.baidu.com">TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</a></li>
+        </ul>
+    </div>
+
+    <div id="step1">
+        STEP1
+    </div>
+    <div id="step2">
+        TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+    </div>
+    <div id="step3">
+        STEP3
+    </div>
+    <div id="step4">
+        STEP4
+    </div>
+	
+    <script src="jquery.js"></script>
+    <script src="jquery-nwizard.js"></script>
+    <script>
+     $('#wizard').nwizard({
+        clicked: false,
+        panels: [
+            { tag: "#step1", 
+                beforeNext: function(){
+                    console.log('step1')
+                    return false
+                },
+                beforeEnter: function(){
+                    alert('Enter');
+                }
+            },
+            "#step2",
+            { tag: "#step3", 
+                beforeEnter: function(){
+                    alert('Enter');
+                } 
+            },
+            { tag: "#step4", beforeNext: function(){} }
+        ]
+     });
+    </script>
+</body>
+</html>

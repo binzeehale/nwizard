@@ -1,0 +1,92 @@
+.wizard {
+    margin: 0;
+    padding: 0px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.wizard ul{
+    margin: 0;
+    width: 100%;
+    height: 54px;
+    padding: 0px;
+    display: table-row;
+}
+
+.wizard li {
+    list-style: none;
+    padding: 0px;
+    display: table-cell;
+    white-space:nowrap;
+    text-align: center;
+    vertical-align:middle;
+    padding-bottom: 8px;
+    overflow: visible;
+}
+
+.wizard li.last {
+    width: auto;
+}
+
+.wizard li div.title {
+    margin-bottom: 8px;
+    color: #7f858a;
+    height: 18px;
+    font-size: 12px;
+}
+
+.wizard li div.circle {
+    position: relative;
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    background: url(images/roll.png);
+    z-index: 99;
+}
+
+.wizard li div.circle span{
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    color: #a1a0a5;
+    font-weight: bold;
+}
+
+.wizard li div.horizontal-bar {
+    position: relative;
+    bottom: 19px;
+    right: 50%;
+    height: 6px;
+    background-image: url(images/navbar-banner.png);
+    background-repeat: repeat-x;
+    z-index: 98;
+}
+
+.wizard li div.hide {
+    width: 0;
+}
+
+.wizard li.active div.circle {
+    background-image: url(images/roll_blue.png);
+}
+
+.wizard li.active div.circle span{
+    color: #458EDD;
+}
+.wizard li.active div.horizontal-bar {
+    background-image: url(images/navbar-banner-on.png);
+}
+
+.wizard li.on div.circle {
+    background-image: url(images/roll_blue.png);
+}
+
+.wizard li.on div.circle span{
+    color: #458EDD;
+}
+.wizard li.on div.horizontal-bar {
+    background-image: url(images/navbar-banner-on.png);
+}
